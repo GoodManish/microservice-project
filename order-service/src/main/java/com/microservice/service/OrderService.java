@@ -24,7 +24,7 @@ public class OrderService {
         payment.setAmount(order.getPrice());
 
         //Rest call
-        Payment pmtResponse = restTemplate.postForObject("http://localhost:9191/payment/doPayment", payment, Payment.class);
+        Payment pmtResponse = restTemplate.postForObject("http://PAYMENT-SERVICE/payment/doPayment", payment, Payment.class);
 
         responseMsg = pmtResponse.getPaymentStatus().equals("success") ? "Payment Processed & Order placed successfully" : "Payment FAILURE! Order added back to cart";
 
