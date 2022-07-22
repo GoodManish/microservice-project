@@ -17,4 +17,9 @@ public class CloudGatewayApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		System.out.println("cloud gateway branch A");
 	}
+	public String logs(){
+		System.out.println(" cloudgatway branch B");
+
+		return "Success";
+	}
 }
