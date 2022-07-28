@@ -21,4 +21,7 @@ spring:
       uri:
         - http://localhost:9196
 
+logging:
+  file: C:/Users/vanma/Desktop/logs/microservice.log
+
 

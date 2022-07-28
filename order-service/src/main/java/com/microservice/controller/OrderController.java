@@ -1,5 +1,6 @@
 package com.microservice.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.microservice.common.Payment;
 import com.microservice.common.TransactionRequest;
 import com.microservice.common.TransactionResponse;
@@ -19,7 +20,7 @@ public class OrderController {
     private OrderService orderService;
 
     @PostMapping("/bookOrder")
-    public TransactionResponse bookOrder(@RequestBody TransactionRequest transactionRequest) {
+    public TransactionResponse bookOrder(@RequestBody TransactionRequest transactionRequest) throws JsonProcessingException {
         return orderService.saveOrder(transactionRequest);
     }
 }

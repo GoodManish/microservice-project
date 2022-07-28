@@ -16,3 +16,6 @@ spring:
       enabled: true
   application:
     name: PAYMENT-SERVICE
+
+logging:
+  file: C:/Users/vanma/Desktop/logs/microservice.log
